@@ -85,7 +85,7 @@ namespace BizHawk.Client.EmuHawk
 				}
 				else
 				{
-					_saveBackgroundWorker.RunWorkerAsync();
+					if (!_saveBackgroundWorker.IsBusy) _saveBackgroundWorker.RunWorkerAsync();
 				}
 				Settings.RecentTas.Add(CurrentTasMovie.Filename);
 			}
@@ -110,7 +110,7 @@ namespace BizHawk.Client.EmuHawk
 				}
 				else
 				{
-					_saveBackgroundWorker.RunWorkerAsync();
+					if (!_saveBackgroundWorker.IsBusy) _saveBackgroundWorker.RunWorkerAsync();
 				}
 
 				Settings.RecentTas.Add(CurrentTasMovie.Filename);

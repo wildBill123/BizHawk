@@ -902,5 +902,10 @@ namespace BizHawk.Client.EmuHawk
 				}
 			}
 		}
+
+        private void TASMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
 	}
 }
